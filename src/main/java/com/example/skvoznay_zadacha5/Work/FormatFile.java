@@ -5,5 +5,9 @@ public enum FormatFile {
     ZIP,
     TXT,
     XML,
-    EMPTY
+    EMPTY,
+    ENCRYPTED,
+    JSON,
+    JAR,
+    RAR
 };
