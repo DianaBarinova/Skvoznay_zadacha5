@@ -1,16 +1,61 @@
-.button {
-    -fx-background-radius :  30;
+#iChoiceButton{
+    -fx-background-radius :  40;
+     -fx-color :#f6b878;
+     -fx-text-fill : #000000;
+}
+#iParseFileButton{
+    -fx-background-radius :  40;
+    -fx-color :#f6b878;
+    -fx-text-fill : #000000;
+}
+#iWriteButton{
+    -fx-background-radius :  40;
+     -fx-color :#f6b878;
+     -fx-text-fill : #000000;
 }
 
-.button:hover {
-    -fx-color: #383838!important;
-    -fx-text-fill: #fff!important;
-    -fx-background-radius :  30;
+#iInputFilename{
+ -fx-background-radius :  40;
 }
-.iVBox {
-    -fx-background-color: red;
+
+
+#iVBox{
+ -fx-background-color: #f6f5f0;
 }
-.root {
-    -fx-base: #bfe7ff;
+
+#iChoiceButton:hover
+{
+-fx-background-color : #d0d9b6 ;
+-fx-background-radius :  30;
+-fx-text-fill : #000000;
 }
+#iChoiceButton:pressed
+{
+-fx-text-fill : #fff ;
+-fx-background-radius :  30;
+}
+#iParseFileButton:hover
+{
+-fx-background-color : #d0d9b6 ;
+-fx-background-radius :  30;
+-fx-text-fill : #000000;
+}
+#iParseFileButton:pressed
+{
+-fx-text-fill : #fff ;
+-fx-background-radius :  30;
+}
+#iWriteButton:hover
+{
+-fx-background-color : #d0d9b6 ;
+-fx-background-radius :  30;
+-fx-text-fill : #000000;
+}
+#iWriteButton:pressed
+{
+-fx-text-fill : #fff ;
+-fx-background-radius :  30;
+}
+
+
 
