@@ -27,34 +27,34 @@
                   <Image url="@Images/3.jpg" />
                </image>
             </ImageView>
-            <Button id="iParseFileButton" fx:id="ParseFileButton" layoutX="25.0" layoutY="105.0" mnemonicParsing="false" onAction="#ParseFile" prefHeight="46.0" prefWidth="163.0" text="process the file" />
+            <Button id="iParseFileButton" fx:id="ParseFileButton" layoutX="25.0" layoutY="105.0" mnemonicParsing="false" onAction="#ParseFile" prefHeight="46.0" prefWidth="163.0" text="Process the file" />
             <Button id="iWriteButton" fx:id="WrireButton" layoutX="31.0" layoutY="231.0" mnemonicParsing="false" onAction="#Writte" prefHeight="46.0" prefWidth="163.0" text="Save" />
             <TextField id="iInputFilename" fx:id="inputFileName" alignment="CENTER" layoutX="31.0" layoutY="175.0" prefHeight="46.0" prefWidth="163.0" promptText="Enter the file name" style="-fx-background-radius: 40;">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font></TextField>
-            <TextArea id="iPrimer" fx:id="Primer" layoutX="317.0" layoutY="254.0" prefHeight="313.0" prefWidth="200.0">
+            <TextArea id="iPrimer" fx:id="Primer" layoutX="317.0" layoutY="231.0" prefHeight="313.0" prefWidth="200.0">
                <font>
                   <Font size="18.0" />
                </font>
             </TextArea>
-            <TextArea id="iOtvet" fx:id="otvet" layoutX="517.0" layoutY="254.0" prefHeight="313.0" prefWidth="149.0">
+            <TextArea id="iOtvet" fx:id="otvet" layoutX="517.0" layoutY="231.0" prefHeight="313.0" prefWidth="149.0">
                <font>
                   <Font size="22.0" />
                </font>
             </TextArea>
-            <ImageView fitHeight="224.0" fitWidth="218.0" layoutX="455.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="471.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/4.jpg" />
                </image>
             </ImageView>
-            <Text layoutX="364.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="examples">
+            <Text id="iExamples" layoutX="364.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examples">
                <font>
                   <Font name="Arial" size="25.0" />
                </font></Text>
-            <Text layoutX="541.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="decisions">
+            <Text id="iAnswers" layoutX="541.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answers">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Comic Sans MS" size="25.0" />
                </font></Text>
          </children>
       </AnchorPane>

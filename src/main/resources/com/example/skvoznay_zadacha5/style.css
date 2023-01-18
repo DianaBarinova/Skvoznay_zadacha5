@@ -2,20 +2,27 @@
     -fx-background-radius :  40;
      -fx-color :#f6b878;
      -fx-text-fill : #000000;
+     -fx-font-family: "Comic Sans MS";
+     -fx-font-size: 15;
 }
 #iParseFileButton{
     -fx-background-radius :  40;
     -fx-color :#f6b878;
     -fx-text-fill : #000000;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15;
 }
 #iWriteButton{
     -fx-background-radius :  40;
      -fx-color :#f6b878;
      -fx-text-fill : #000000;
+     -fx-font-family: "Comic Sans MS";
+     -fx-font-size: 15;
 }
 
 #iInputFilename{
  -fx-background-radius :  40;
+ -fx-font-family: "Comic Sans MS";
 }
 
 
@@ -23,38 +30,64 @@
  -fx-background-color: #f6f5f0;
 }
 
+#iExamples{
+-fx-font-style: normal;
+-fx-font-size: 25;
+-fx-font-family: "Comic Sans MS";
+ -fx-font-stretch: normal;
+}
+
+#iAnswers{
+-fx-font-style: normal;
+ -fx-font-size: 25;
+ -fx-font-family: "Comic Sans MS";
+ -fx-font-stretch: normal;
+}
+
 #iChoiceButton:hover
 {
 -fx-background-color : #d0d9b6 ;
 -fx-background-radius :  30;
 -fx-text-fill : #000000;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 #iChoiceButton:pressed
 {
 -fx-text-fill : #fff ;
 -fx-background-radius :  30;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 #iParseFileButton:hover
 {
 -fx-background-color : #d0d9b6 ;
 -fx-background-radius :  30;
 -fx-text-fill : #000000;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 #iParseFileButton:pressed
 {
 -fx-text-fill : #fff ;
 -fx-background-radius :  30;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 #iWriteButton:hover
 {
 -fx-background-color : #d0d9b6 ;
 -fx-background-radius :  30;
 -fx-text-fill : #000000;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 #iWriteButton:pressed
 {
 -fx-text-fill : #fff ;
 -fx-background-radius :  30;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 15;
 }
 
 
