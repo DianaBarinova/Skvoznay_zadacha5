@@ -1,0 +1,16 @@
+.button {
+    -fx-background-radius :  30;
+}
+
+.button:hover {
+    -fx-color: #383838!important;
+    -fx-text-fill: #fff!important;
+    -fx-background-radius :  30;
+}
+.iVBox {
+    -fx-background-color: red;
+}
+.root {
+    -fx-base: #bfe7ff;
+}
+

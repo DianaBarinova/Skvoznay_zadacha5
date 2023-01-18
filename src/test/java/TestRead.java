@@ -1,5 +1,6 @@
 import com.example.skvoznay_zadacha5.Work.Archiver.Zip;
 import com.example.skvoznay_zadacha5.Work.Parsing.Txt;
+import com.example.skvoznay_zadacha5.Work.Parsing.Xml;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,7 +12,7 @@ public class TestRead {
     public void TestTxt(){
         Txt txt = new Txt();
         try {
-            String actual = txt.Parsse("src/TestFiles/inputTestTxt.txt");
+            String actual = txt.read("src/TestFiles/inputTestTxt.txt");
             assertEquals(expected,actual);
 
         } catch (Exception e) {
@@ -20,9 +21,9 @@ public class TestRead {
     }
     @Test
     public void TestXml(){
-        Txt txt = new Txt();
+        Xml xml=new Xml();
         try {
-            String actual = txt.Parsse("src/TestFiles/inputTestXml.xml");
+            String actual = xml.read("src/TestFiles/inputTestXml.xml");
             assertEquals(expected,actual);
 
         } catch (Exception e) {

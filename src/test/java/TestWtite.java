@@ -18,14 +18,14 @@ public class TestWtite {
     public void TestWriteTxt() throws IOException {
         Txt txt= new Txt();
         txt.writeFile("src/TestFiles/OutputTestTxt.txt", expected);
-       String actual=txt.Parsse("src/TestFiles/OutputTestTxt.txt");
+       String actual=txt.read("src/TestFiles/OutputTestTxt.txt");
         assertEquals(expected,actual);
     }
     @Test
     public void TestWriteXml() throws IOException, ParserConfigurationException, TransformerException, GeneralSecurityException, SAXException {
         Xml xml=new Xml();
         xml.writting("src/TestFiles/OutputTestXml.xml", expected);
-        String actual=xml.reading("src/TestFiles/OutputTestXml.xml");
+        String actual=xml.read("src/TestFiles/OutputTestXml.xml");
         assertEquals(expected,actual);
     }
 }

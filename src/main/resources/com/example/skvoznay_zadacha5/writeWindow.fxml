@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skvoznay_zadacha5.WriteController">
+   <children>
+      <Button id="iZip" fx:id="zip" layoutX="105.0" layoutY="142.0" mnemonicParsing="false" onAction="#zipFile" text="ZIP" />
+      <Text fx:id="textFile" layoutX="251.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="239.13671875" />
+      <Button fx:id="closeButton" layoutX="148.0" layoutY="267.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="201.0" text="close" />
+   </children>
+</AnchorPane>

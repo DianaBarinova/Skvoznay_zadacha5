@@ -3,7 +3,6 @@ package com.example.skvoznay_zadacha5.Work.Parsing;
 import com.fathzer.soft.javaluator.DoubleEvaluator;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -18,7 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 
 public class Xml {
 
-    public String reading(String FileName) throws GeneralSecurityException, IOException, ParserConfigurationException, SAXException {
+    public String read(String FileName) throws GeneralSecurityException, IOException, ParserConfigurationException, SAXException {
         String result="";
         File file = new File(FileName);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -28,25 +27,9 @@ public class Xml {
             for(int i = 0; i < nodeList.getLength();i++){
                 result=result+nodeList.item(i).getTextContent()+'\n';
             }
-            return podschet(result);
+            return result;
         }
 
-    public String podschet(String primer) {
-        DoubleEvaluator eval = new DoubleEvaluator();
-        String result = "";
-        //    Double result = eval.evaluate(primer);
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < primer.length(); ++i) {
-            char c = primer.charAt(i);
-            if (c != '\n') {
-                builder.append(c);
-            } else {
-                result = result + eval.evaluate(builder.toString()).toString() + '\n';
-                builder.delete(0, builder.length());
-            }
-        }
-        return result;
-    }
     public  void writting (String nameFile, String str) throws ParserConfigurationException, IOException, TransformerException {
         String root = "root";
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();

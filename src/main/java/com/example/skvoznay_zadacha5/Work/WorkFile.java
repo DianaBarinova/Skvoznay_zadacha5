@@ -8,17 +8,23 @@ import com.example.skvoznay_zadacha5.Work.Encryptor.Encryptor;
 import com.example.skvoznay_zadacha5.Work.Parsing.Json;
 import com.example.skvoznay_zadacha5.Work.Parsing.Txt;
 import com.example.skvoznay_zadacha5.Work.Parsing.Xml;
+import com.fathzer.soft.javaluator.DoubleEvaluator;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Scanner;
 
 public class WorkFile{
     String decision;
+    String result;
+    String outputFile;
+
+
         public void Read(String nameFile) throws IOException, GeneralSecurityException, ParserConfigurationException, SAXException {
             FileUtilities fileUtilities=new FileUtilities();
             FormatFile formatFile = FormatFile.START;
@@ -60,12 +66,14 @@ public class WorkFile{
                         nameFile = rar.unarchiveFile(nameFile);
                         util = fileUtilities.getFileExtension(nameFile);
                         formatFile = FormatFile.START;
+                        break;
 
                     case JAR:
                         Archiver jar=new Jar();
                         nameFile = jar.unarchiveFile(nameFile);
                         util = fileUtilities.getFileExtension(nameFile);
                         formatFile = FormatFile.START;
+                        break;
 
                     case ENCRYPTED:
                         File file=new File(nameFile);
@@ -74,15 +82,16 @@ public class WorkFile{
                         file =encryptor.encoding(file, decrypt = true);
                         nameFile=file.getName();
                         formatFile = FormatFile.START;
+                        break;
 
                     case TXT:
                         Txt txt=new Txt();
-                       this.decision=txt.Parsse(nameFile);
+                       this.decision=txt.read(nameFile);
                         util = "end";
                         break;
                     case XML:
                         Xml xml=new Xml();
-                        this.decision=xml.reading(nameFile);
+                        this.decision=xml.read(nameFile);
                         util = "end";
                         break;
                     case JSON:
@@ -94,29 +103,35 @@ public class WorkFile{
                 }
             }
         }
+
+        public void parse() throws FileNotFoundException {
+            Calculation calculation=new Calculation();
+            this.result=calculation.Parsse(this.decision);
+        }
         public void write(String nameFile) throws ParserConfigurationException, IOException, TransformerException {
+         parse();
             FileUtilities fileUtilities = new FileUtilities();
             if (fileUtilities.getFileExtension(nameFile).equals("txt")) {
                 Txt txt = new Txt();
-                txt.writeFile(nameFile, this.decision);
+                txt.writeFile(nameFile, this.result);
             }
             else if(fileUtilities.getFileExtension(nameFile).equals("xml")){
              Xml xml = new Xml();
-             xml.writting(nameFile, this.decision);
+             xml.writting(nameFile, this.result);
 
             }
             else if(fileUtilities.getFileExtension(nameFile).equals("json")){
                 Json json= new Json();
-                json.writing(this.decision, nameFile);
+                json.writing(this.result, nameFile);
             }
-
-            packingFile(nameFile);
+this.outputFile=nameFile;
+        //    packingFile(nameFile);
         }
 
         public void packingFile(String nameFile)
         {int answer=0;
             Scanner in = new Scanner(System.in);
-            while(answer!=4) {
+            while(answer!=5) {
                 massage();
                 answer=in.nextInt();
                 switch (answer) {
@@ -134,6 +149,9 @@ nameFile=zip.archiveFile(nameFile);
                         file =encryptor.encoding(file, decrypt = false);
                         nameFile=file.getName();
                         break;
+                    case (4):
+                        Archiver jar=new Jar();
+                        nameFile=jar.archiveFile(nameFile);
                 }
             }
 
@@ -144,8 +162,20 @@ nameFile=zip.archiveFile(nameFile);
                     "1)file archiving zip"+'\n'
                     +"2)file archiving rar"+'\n'+
                     "3)encode the file"+'\n' +
-                    "4)end");
+                    "4)jar\n"+
+                    "5)end");
         }
+
+    public String getDecision() {
+        return decision;
+    }
+    public String getResult() {
+        return result;
+    }
+
+    public String getOutputFile() {
+        return outputFile;
+    }
 }
 
 
