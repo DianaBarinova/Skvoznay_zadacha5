@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<element>69-12*2-35</element>
+	<element>20*20+35/5-35</element>
+	<element>((35-89+100)/32)*2</element>
+        <element>tan(pi/4)^3+99</element>
+        <element>sin(asin(1/2))</element>
+</root>

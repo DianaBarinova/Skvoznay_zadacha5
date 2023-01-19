@@ -1,7 +1,10 @@
 package com.example.skvoznay_zadacha5;
 
 import com.example.skvoznay_zadacha5.Work.Archiver.Archiver;
+import com.example.skvoznay_zadacha5.Work.Archiver.Jar;
 import com.example.skvoznay_zadacha5.Work.Archiver.Zip;
+import com.example.skvoznay_zadacha5.Work.Encryptor.Encryptor;
+import com.example.skvoznay_zadacha5.Work.FormatFile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,12 +30,6 @@ public class WriteController implements Initializable {
     @FXML
     private Button closeButton;
 
-    @FXML
-    void zipFile(ActionEvent event) {
-Archiver zip=new Zip();
-outFile=zip.archiveFile(outFile);
-textFile.setText(outFile);
-    }
 DataSingleton data=DataSingleton.getInstance();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,8 +41,33 @@ DataSingleton data=DataSingleton.getInstance();
     void close(ActionEvent event) throws IOException {
         Stage stage=(Stage) textFile.getScene().getWindow();
         Parent root= FXMLLoader.load((getClass().getResource("readwrite.fxml")));
-        stage.setScene(new Scene(root));
+        Scene scene=new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        stage.setScene(scene);
     }
 
+    @FXML
+    void zipFile(ActionEvent event) {
+        Archiver zip=new Zip();
+        outFile=zip.archiveFile(outFile);
+        textFile.setText(outFile);
+    }
 
+    @FXML
+    public void rarFile(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void encodeFile(ActionEvent actionEvent) {
+        File file=new File(outFile);
+        Encryptor encryptor=new Encryptor();
+        file =encryptor.encoding(file, false);
+        outFile=file.getName();
+        textFile.setText(outFile);
+    }
+    @FXML
+    public void jarFile(ActionEvent actionEvent) {
+        Archiver jar=new Jar();
+        outFile=jar.archiveFile(outFile);
+        textFile.setText(outFile);
+    }
 }

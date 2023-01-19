@@ -1,5 +1,9 @@
 package com.example.skvoznay_zadacha5;
 
+import com.example.skvoznay_zadacha5.Work.Archiver.Archiver;
+import com.example.skvoznay_zadacha5.Work.Archiver.Jar;
+import com.example.skvoznay_zadacha5.Work.Archiver.Zip;
+import com.example.skvoznay_zadacha5.Work.Encryptor.Encryptor;
 import com.example.skvoznay_zadacha5.Work.WorkFile;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +14,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
@@ -34,14 +39,13 @@ public class Main extends Application {
     }
 }
 
-
-/*public class Main{
+/*
+public class Main{
     public static void main(String[] args) throws IOException, GeneralSecurityException, ParserConfigurationException, SAXException, TransformerException {
         WorkFile workFile=new WorkFile();
-        workFile.Read("p10.jar");
-        workFile.write("p20.txt");
+       workFile.Read("input.txt");
     }
 
 }
+*/
 
- */

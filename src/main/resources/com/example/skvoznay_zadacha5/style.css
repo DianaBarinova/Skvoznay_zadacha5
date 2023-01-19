@@ -46,11 +46,13 @@
 
 #iPrimer{
  -fx-background-color: #f6b878;
+ -fx-font-size: 20;
 }
 
 #iOtvet{
 -fx-background-color: #f6b878;
--fx-background-size: 10pt;
+-fx-font-size: 20;
+
 }
 
 #iChoiceButton:hover

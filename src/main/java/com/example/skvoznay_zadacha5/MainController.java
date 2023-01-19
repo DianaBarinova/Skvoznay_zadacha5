@@ -82,10 +82,12 @@ Primer.setText(workFile.getDecision());
     @FXML
     void Writte(ActionEvent event) throws ParserConfigurationException, IOException, TransformerException {
         workFile.write(inputFileName.getText());
-        data.setFileName(inputFileName.getText());
+         data.setFileName(inputFileName.getText());
 Stage stage=(Stage) inputFileName.getScene().getWindow();
   Parent root=FXMLLoader.load((getClass().getResource("writeWindow.fxml")));
-  stage.setScene(new Scene(root));
+        Scene scene=new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("style2.css").toExternalForm());
+        stage.setScene(scene);
 
 }
 

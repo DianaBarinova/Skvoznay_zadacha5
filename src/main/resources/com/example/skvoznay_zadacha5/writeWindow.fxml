@@ -4,10 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skvoznay_zadacha5.WriteController">
+<AnchorPane id="iAnhroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skvoznay_zadacha5.WriteController">
    <children>
-      <Button id="iZip" fx:id="zip" layoutX="105.0" layoutY="142.0" mnemonicParsing="false" onAction="#zipFile" text="ZIP" />
+      <Button id="iZipButton" fx:id="zip" layoutX="64.0" layoutY="142.0" mnemonicParsing="false" onAction="#zipFile" prefHeight="44.0" prefWidth="94.0" text="ZIP" />
       <Text fx:id="textFile" layoutX="251.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="239.13671875" />
-      <Button fx:id="closeButton" layoutX="148.0" layoutY="267.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="201.0" text="close" />
+      <Button id="iCloseButton" fx:id="closeButton" layoutX="257.0" layoutY="273.0" mnemonicParsing="false" onAction="#close" prefHeight="44.0" prefWidth="94.0" text="close" />
+      <Button id="iRARButton" fx:id="RARButton" layoutX="191.0" layoutY="142.0" mnemonicParsing="false" onAction="#rarFile" prefHeight="44.0" prefWidth="94.0" text="RAR" />
+      <Button id="iEncodeButton" fx:id="encodeButton" layoutX="446.0" layoutY="142.0" mnemonicParsing="false" onAction="#encodeFile" prefHeight="44.0" prefWidth="94.0" text="encode" />
+      <Button id="iJarButton" fx:id="jarButton" layoutX="323.0" layoutY="142.0" mnemonicParsing="false" onAction="#jarFile" prefHeight="44.0" prefWidth="94.0" text="JAR" />
    </children>
 </AnchorPane>

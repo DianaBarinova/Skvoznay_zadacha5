@@ -29,7 +29,7 @@
             </ImageView>
             <Button id="iParseFileButton" fx:id="ParseFileButton" layoutX="41.0" layoutY="106.0" mnemonicParsing="false" onAction="#ParseFile" prefHeight="46.0" prefWidth="163.0" text="Process the file" />
             <Button id="iWriteButton" fx:id="WrireButton" layoutX="41.0" layoutY="236.0" mnemonicParsing="false" onAction="#Writte" prefHeight="46.0" prefWidth="163.0" text="Save" />
-            <TextField id="iInputFilename" fx:id="inputFileName" alignment="CENTER" layoutX="41.0" layoutY="178.0" prefHeight="46.0" prefWidth="163.0" promptText="Enter the file name" style="-fx-background-radius: 40;">
+            <TextField id="iInputFilename" fx:id="inputFileName" alignment="CENTER" layoutX="41.0" layoutY="172.0" prefHeight="46.0" prefWidth="163.0" promptText="Enter the file name" style="-fx-background-radius: 40;">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font></TextField>
