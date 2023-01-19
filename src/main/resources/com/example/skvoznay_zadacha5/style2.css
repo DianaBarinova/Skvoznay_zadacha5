@@ -1,16 +1,17 @@
 #iAnhroPane{
 -fx-background-color: #f6f5f0;
 }
+
 .button{
 -fx-background-radius :  40;
-     -fx-color :#f6b878;
-     -fx-text-fill : #000000;
-     -fx-font-family: "Comic Sans MS";
-     -fx-font-size: 17;
+-fx-color :#f6b878;
+-fx-text-fill : #000000;
+-fx-font-family: "Comic Sans MS";
+-fx-font-size: 17;
 }
 
-.button:hover
-{-fx-background-color : #d0d9b6 ;
+.button:hover{
+-fx-background-color : #d0d9b6 ;
  -fx-background-radius :  30;
  -fx-text-fill : #000000;
  -fx-font-family: "Comic Sans MS";
