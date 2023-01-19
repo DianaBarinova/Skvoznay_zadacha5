@@ -4,11 +4,11 @@ import com.example.skvoznay_zadacha5.Work.Archiver.Archiver;
 import com.example.skvoznay_zadacha5.Work.Archiver.Jar;
 import com.example.skvoznay_zadacha5.Work.Archiver.Rar;
 import com.example.skvoznay_zadacha5.Work.Archiver.Zip;
+import com.example.skvoznay_zadacha5.Work.Calculator.Calculation;
 import com.example.skvoznay_zadacha5.Work.Encryptor.Encryptor;
 import com.example.skvoznay_zadacha5.Work.Parsing.Json;
 import com.example.skvoznay_zadacha5.Work.Parsing.Txt;
 import com.example.skvoznay_zadacha5.Work.Parsing.Xml;
-import com.fathzer.soft.javaluator.DoubleEvaluator;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -77,9 +77,8 @@ public class WorkFile{
 
                     case ENCRYPTED:
                         File file=new File(nameFile);
-                        boolean decrypt;
                         Encryptor encryptor=new Encryptor();
-                        file =encryptor.encoding(file, decrypt = true);
+                        file =encryptor.encoding(file, true);
                         nameFile=file.getName();
                         formatFile = FormatFile.START;
                         break;
