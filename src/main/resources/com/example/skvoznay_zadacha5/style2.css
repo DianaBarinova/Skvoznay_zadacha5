@@ -1,8 +1,7 @@
 #iAnhroPane{
 -fx-background-color: #f6f5f0;
 }
-
-#iZipButton{
+.button{
 -fx-background-radius :  40;
      -fx-color :#f6b878;
      -fx-text-fill : #000000;
@@ -10,102 +9,15 @@
      -fx-font-size: 17;
 }
 
-#iRARButton{
--fx-background-radius :  40;
-     -fx-color :#f6b878;
-     -fx-text-fill : #000000;
-     -fx-font-family: "Comic Sans MS";
-     -fx-font-size: 17;
-}
-
-#iJarButton{
--fx-background-radius :  40;
-     -fx-color :#f6b878;
-     -fx-text-fill : #000000;
-     -fx-font-family: "Comic Sans MS";
-     -fx-font-size: 17;
-}
-
-#iEncodeButton{
--fx-background-radius :  40;
-     -fx-color :#f6b878;
-     -fx-text-fill : #000000;
-     -fx-font-family: "Comic Sans MS";
-     -fx-font-size: 17;
-}
-
-#iCloseButton{
--fx-background-radius :  40;
-     -fx-color :#f6b878;
-     -fx-text-fill : #000000;
-     -fx-font-family: "Comic Sans MS";
-     -fx-font-size: 17;
-
-}
-#iZipButton:hover
+.button:hover
 {-fx-background-color : #d0d9b6 ;
  -fx-background-radius :  30;
  -fx-text-fill : #000000;
  -fx-font-family: "Comic Sans MS";
  -fx-font-size: 17;
 }
-#iRARButton:hover
-{
--fx-background-color : #d0d9b6 ;
--fx-background-radius :  30;
--fx-text-fill : #000000;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;
-}
-#iJarButton:hover{
--fx-background-color : #d0d9b6 ;
--fx-background-radius :  30;
--fx-text-fill : #000000;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;}
 
-#iEncodeButton:hover{
--fx-background-color : #d0d9b6 ;
--fx-background-radius :  30;
--fx-text-fill : #000000;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;}
-
-#iCloseButton:hover{
--fx-background-color : #d0d9b6 ;
--fx-background-radius :  30;
--fx-text-fill : #000000;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;}
-
-#iZipButton:pressed{
--fx-text-fill : #fff ;
--fx-background-radius :  30;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;}
-
-#iRARButton:pressed{
--fx-text-fill : #fff ;
--fx-background-radius :  30;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;
-}
-
-#iJarButton:pressed{
--fx-text-fill : #fff ;
--fx-background-radius :  30;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;
-}
-
-#iEncodeButton:pressed{
--fx-text-fill : #fff ;
--fx-background-radius :  30;
--fx-font-family: "Comic Sans MS";
--fx-font-size: 17;
-}
-
-#iCloseButton:pressed{
+.button:pressed{
 -fx-text-fill : #fff ;
 -fx-background-radius :  30;
 -fx-font-family: "Comic Sans MS";
