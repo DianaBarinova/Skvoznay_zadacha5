@@ -12,4 +12,6 @@ module com.example.skvoznay_zadacha5 {
     opens com.example.skvoznay_zadacha5.Work to javafx.fxml;
     exports com.example.skvoznay_zadacha5.Work.Encryptor;
     opens com.example.skvoznay_zadacha5.Work.Encryptor to javafx.fxml;
+    exports com.example.skvoznay_zadacha5.Work.Calculator;
+    opens com.example.skvoznay_zadacha5.Work.Calculator to javafx.fxml;
 }

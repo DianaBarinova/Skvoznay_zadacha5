@@ -2,6 +2,7 @@ package com.example.skvoznay_zadacha5;
 
 import com.example.skvoznay_zadacha5.Work.Archiver.Archiver;
 import com.example.skvoznay_zadacha5.Work.Archiver.Jar;
+import com.example.skvoznay_zadacha5.Work.Archiver.Rar;
 import com.example.skvoznay_zadacha5.Work.Archiver.Zip;
 import com.example.skvoznay_zadacha5.Work.Encryptor.Encryptor;
 import com.example.skvoznay_zadacha5.Work.FormatFile;
@@ -55,6 +56,9 @@ DataSingleton data=DataSingleton.getInstance();
 
     @FXML
     public void rarFile(ActionEvent actionEvent) {
+        Archiver rar=new Rar();
+        outFile=rar.archiveFile(outFile);
+        textFile.setText(outFile);
     }
     @FXML
     public void encodeFile(ActionEvent actionEvent) {

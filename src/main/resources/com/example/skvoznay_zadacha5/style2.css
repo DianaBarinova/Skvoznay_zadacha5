@@ -2,6 +2,13 @@
 -fx-background-color: #f6f5f0;
 }
 
+#iQuestion{
+-fx-font-style: normal;
+ -fx-font-size: 20;
+ -fx-font-family: "Comic Sans MS";
+ -fx-font-stretch: normal;
+}
+
 .button{
 -fx-background-radius :  40;
 -fx-color :#f6b878;

@@ -1,4 +1,4 @@
-import com.example.skvoznay_zadacha5.Work.Calculation;
+import com.example.skvoznay_zadacha5.Work.Calculator.Calculation;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

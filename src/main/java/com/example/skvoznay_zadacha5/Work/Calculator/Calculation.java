@@ -1,4 +1,4 @@
-package com.example.skvoznay_zadacha5.Work;
+package com.example.skvoznay_zadacha5.Work.Calculator;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
 
